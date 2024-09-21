@@ -6,10 +6,9 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:33:08 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 17:19:58 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 20:06:52 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "Point.hpp"
 
@@ -37,14 +36,10 @@ Point::~Point()
 }
 
 // Overloaded Operators
-Point& Point::operator=(const Point& src)
+Point& Point::operator=(Point& src)
 {
 	// std::cout << "Point Assignment operator called" << std::endl;
-	if (this == &src)
-		return *this;
-
-	/*CODE*/
-	return *this;
+	return (src);
 }
 
 // Public Methods
@@ -64,7 +59,7 @@ const Fixed& Point::getY(void)const
 
 
 // Overload for ostream
-std::ostream&	operator<<(std::ostream& o, Point const point)
+std::ostream&	operator<<(std::ostream& o, Point const& point)
 {
 	o << "_x: " << point.getX() << " / _y: " << point.getY() << std::endl;
 	return (o);

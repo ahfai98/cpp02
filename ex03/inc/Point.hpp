@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:49 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 17:19:58 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 20:07:36 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class Point
 		~Point();
 
 	// Overloaded Operators
-		Point& operator=(const Point& src);
+		Point& operator=(Point& src);
 
 	// Public Methods
 
@@ -50,6 +50,6 @@ class Point
 };
 
 // Overload for ostream
-std::ostream&	operator<<(std::ostream& o, Point const point);
+std::ostream&	operator<<(std::ostream& o, Point const& point);
 
 #endif

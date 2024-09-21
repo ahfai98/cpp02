@@ -6,7 +6,7 @@
 #    By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/18 22:31:31 by jyap              #+#    #+#              #
-#    Updated: 2024/09/21 14:02:26 by jyap             ###   ########.fr        #
+#    Updated: 2024/09/21 19:19:41 by jyap             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ OBJ_DIR = obj/
 
 INC_DIR = inc/
 
-SRC_FILES	= main.cpp Fixed.cpp
+SRC_FILES	= main.cpp Fixed.cpp Point.cpp bsp.cpp 
 
 OBJ_FILES	= $(SRC_FILES:.cpp=.o)
 
