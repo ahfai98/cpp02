@@ -6,13 +6,14 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:20 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/18 22:32:21 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 14:14:05 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 // Header-protection
-#pragma once
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 // Includes
 #include <string>
@@ -38,7 +39,7 @@ class Fixed
 		~Fixed();
 
 	// Overloaded Operators
-		Fixed &operator=(const Fixed &src);
+		Fixed& operator=(const Fixed& src);
 
 		// Comparison Operators
 		bool operator>(Fixed fixed)const;
@@ -64,10 +65,10 @@ class Fixed
 	// Public Methods
 		float toFloat(void)const;
 		int toInt(void)const;
-		static Fixed &min(Fixed &first, Fixed &second);
-		static const Fixed &min(Fixed const &first, Fixed const &second);
-		static Fixed &max(Fixed &first, Fixed &second);
-		static const Fixed &max(Fixed const &first, const Fixed &second);
+		static Fixed& min(Fixed& first, Fixed& second);
+		static const Fixed& min(Fixed const& first, Fixed const& second);
+		static Fixed& max(Fixed &first, Fixed &second);
+		static const Fixed& max(Fixed const& first, const Fixed& second);
 
 	// Getter
 		int getRawBits(void)const;
@@ -76,4 +77,6 @@ class Fixed
 };
 
 // Overload for ostream
-std::ostream &operator<<(std::ostream &o, Fixed const &fixed);
+std::ostream& operator<<(std::ostream& o, Fixed const& fixed);
+
+#endif

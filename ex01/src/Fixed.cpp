@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:08 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/18 22:32:09 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 14:12:59 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Fixed::Fixed(const float input)
 	this->_fp_value = roundf(input * (1 << this->_fract_bits));
 }
 
-Fixed::Fixed(const Fixed &copy)
+Fixed::Fixed(const Fixed& copy)
 {
 	std::cout << "Fixed Copy Constructor called" << std::endl;
 	*this = copy;
@@ -46,7 +46,7 @@ Fixed::~Fixed()
 }
 
 // Overloaded Operators
-Fixed &Fixed::operator=(const Fixed &src)
+Fixed& Fixed::operator=(const Fixed& src)
 {
 	std::cout << "Fixed Assignation operator called" << std::endl;
 	if (this != &src)
@@ -80,7 +80,7 @@ void	Fixed::setRawBits(int const raw)
 }
 
 
-std::ostream	&operator<<(std::ostream &o, Fixed const &fixed)
+std::ostream& operator<<(std::ostream& o, Fixed const& fixed)
 {
 	o << fixed.toFloat();
 	return (o);

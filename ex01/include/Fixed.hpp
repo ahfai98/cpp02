@@ -6,13 +6,14 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:04 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/18 22:32:05 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 14:12:04 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 // Header-protection
-#pragma once
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 // Includes
 #include <iostream>
@@ -37,7 +38,7 @@ class Fixed
 		~Fixed();
 
 	// Overloaded Operators
-		Fixed &operator=(const Fixed &src);
+		Fixed& operator=(const Fixed& src);
 
 	// Public Methods
 		float toFloat(void)const;
@@ -48,4 +49,6 @@ class Fixed
 		void setRawBits(int const raw);
 };
 
-std::ostream    &operator<<(std::ostream &o, Fixed const &fixed);
+std::ostream&	operator<<(std::ostream& o, Fixed const& fixed);
+
+#endif

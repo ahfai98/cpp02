@@ -6,13 +6,14 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:49 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/18 22:32:50 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 14:16:38 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 // Header-protection
-#pragma once
+#ifndef POINT_HPP
+# define POINT_HPP
 
 // Includes
 #include <string>
@@ -37,16 +38,18 @@ class Point
 		~Point();
 
 	// Overloaded Operators
-		Point &operator=(const Point &src);
+		Point& operator=(const Point& src);
 
 	// Public Methods
 
 	// Getter
-		const Fixed &getX(void)const;
-		const Fixed &getY(void)const;
+		const Fixed& getX(void)const;
+		const Fixed& getY(void)const;
 	// Setter
 
 };
 
 // Overload for ostream
-std::ostream	&operator<<(std::ostream &o, Point const point);
+std::ostream&	operator<<(std::ostream& o, Point const point);
+
+#endif

@@ -6,7 +6,7 @@
 #    By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/18 22:31:23 by jyap              #+#    #+#              #
-#    Updated: 2024/09/18 22:33:35 by jyap             ###   ########.fr        #
+#    Updated: 2024/09/21 14:02:09 by jyap             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ OBJ_DIR = obj/
 
 INC_DIR = inc/
 
-SRC_FILES	= main.cpp Zombie.cpp randomChump.cpp newZombie.cpp
+SRC_FILES	= main.cpp Fixed.cpp
 
 OBJ_FILES	= $(SRC_FILES:.cpp=.o)
 

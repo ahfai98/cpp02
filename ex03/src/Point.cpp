@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:33:08 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/18 22:33:09 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 14:18:17 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Point::Point(const float x, const float y):_x(x), _y(y)
 	// std::cout << "Constuctor called" << std::endl;
 }
 
-Point::Point(const Point &copy): _x(copy.getX()), _y(copy.getY())
+Point::Point(const Point& copy): _x(copy.getX()), _y(copy.getY())
 {
 	// std::cout << "Point Copy Constructor called" << std::endl;
 	// *this = copy;
@@ -37,7 +37,7 @@ Point::~Point()
 }
 
 // Overloaded Operators
-Point &Point::operator=(const Point &src)
+Point& Point::operator=(const Point& src)
 {
 	// std::cout << "Point Assignation operator called" << std::endl;
 	if (this == &src)
@@ -50,12 +50,12 @@ Point &Point::operator=(const Point &src)
 // Public Methods
 
 // Getter
-const Fixed	&Point::getX(void)const
+const Fixed& Point::getX(void)const
 {
 	return (this->_x);
 }
 
-const Fixed	&Point::getY(void)const
+const Fixed& Point::getY(void)const
 {
 	return (this->_y);
 }
@@ -64,7 +64,7 @@ const Fixed	&Point::getY(void)const
 
 
 // Overload for ostream
-std::ostream	&operator<<(std::ostream &o, Point const point)
+std::ostream&	operator<<(std::ostream& o, Point const point)
 {
 	o << "_x: " << point.getX() << " / _y: " << point.getY() << std::endl;
 	return (o);

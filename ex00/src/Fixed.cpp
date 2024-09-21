@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:31:52 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 13:57:14 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 14:11:49 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Fixed::Fixed(): _fp_value(0)
 	std::cout << "Fixed Default Constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &copy)
+Fixed::Fixed(const Fixed& copy)
 {
 	std::cout << "Fixed Copy Constructor called" << std::endl;
 	*this = copy;
@@ -34,7 +34,7 @@ Fixed::~Fixed()
 }
 
 // Overloaded Operators
-Fixed &Fixed::operator=(const Fixed &src)
+Fixed& Fixed::operator=(const Fixed &src)
 {
 	std::cout << "Fixed Assignment operator called" << std::endl;
 	if (this != &src)

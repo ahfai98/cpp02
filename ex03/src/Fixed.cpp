@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:58 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/18 22:32:59 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 14:17:52 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Fixed::Fixed(const float input)
 	this->_fp_value = roundf(input * (1 << this->_fract_bits));
 }
 
-Fixed::Fixed(const Fixed &copy)
+Fixed::Fixed(const Fixed& copy)
 {
 	// std::cout << "Fixed Copy Constructor called" << std::endl;
 	*this = copy;
@@ -46,7 +46,7 @@ Fixed::~Fixed()
 }
 
 // Overloaded Operators
-Fixed	&Fixed::operator=(const Fixed &src)
+Fixed&	Fixed::operator=(const Fixed& src)
 {
 	// std::cout << "Fixed Assignation operator called" << std::endl;
 	if (this != &src)
@@ -146,7 +146,7 @@ int	Fixed::toInt(void)const
 	return (this->_fp_value >> this->_fract_bits);
 }
 
-Fixed	&Fixed::min(Fixed &first, Fixed &second)
+Fixed&	Fixed::min(Fixed& first, Fixed& second)
 {
 	if (first.toFloat() <= second.toFloat())
 		return (first);
@@ -154,7 +154,7 @@ Fixed	&Fixed::min(Fixed &first, Fixed &second)
 		return (second);
 }
 
-const Fixed	&Fixed::min(const Fixed &first, const Fixed &second)
+const Fixed& Fixed::min(const Fixed& first, const Fixed& second)
 {
 	if (first.toFloat() <= second.toFloat())
 		return (first);
@@ -162,7 +162,7 @@ const Fixed	&Fixed::min(const Fixed &first, const Fixed &second)
 		return (second);
 }
 
-Fixed	&Fixed::max(Fixed &first, Fixed &second)
+Fixed&	Fixed::max(Fixed& first, Fixed& second)
 {
 	if (first.toFloat() >= second.toFloat())
 		return (first);
@@ -170,7 +170,7 @@ Fixed	&Fixed::max(Fixed &first, Fixed &second)
 		return (second);
 }
 
-const Fixed	&Fixed::max(const Fixed &first, const Fixed &second)
+const Fixed& Fixed::max(const Fixed& first, const Fixed& second)
 {
 	if (first.toFloat() >= second.toFloat())
 		return (first);
@@ -193,7 +193,7 @@ void	Fixed::setRawBits(int const raw)
 }
 
 // Overload for ostream
-std::ostream	&operator<<(std::ostream &o, Fixed const &fixed)
+std::ostream&	operator<<(std::ostream& o, Fixed const& fixed)
 {
 	o << fixed.toFloat();
 	return (o);

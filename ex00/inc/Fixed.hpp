@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:31:48 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 13:53:16 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 14:11:22 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Fixed
 		~Fixed();
 
 	// Overloaded Operators
-		Fixed &operator=(const Fixed& src);
+		Fixed& operator=(const Fixed& src);
 
 	// Public Methods
 
