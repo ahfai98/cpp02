@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 22:32:20 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 14:14:05 by jyap             ###   ########.fr       */
+/*   Created: 2024/09/18 22:32:45 by jyap              #+#    #+#             */
+/*   Updated: 2024/09/21 17:19:58 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Fixed
 		Fixed(const float input);
 		Fixed(const Fixed& copy);
 
-	// Deconstructors
+	// Destructors
 		~Fixed();
 
 	// Overloaded Operators
@@ -67,7 +67,7 @@ class Fixed
 		int toInt(void)const;
 		static Fixed& min(Fixed& first, Fixed& second);
 		static const Fixed& min(Fixed const& first, Fixed const& second);
-		static Fixed& max(Fixed &first, Fixed &second);
+		static Fixed& max(Fixed& first, Fixed& second);
 		static const Fixed& max(Fixed const& first, const Fixed& second);
 
 	// Getter

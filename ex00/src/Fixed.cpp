@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:31:52 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 14:11:49 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 17:19:58 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Fixed::Fixed(const Fixed& copy)
 	*this = copy;
 }
 
-// Deconstructors
+// Destructors
 Fixed::~Fixed()
 {
 	std::cout << "Fixed Destructor called" << std::endl;

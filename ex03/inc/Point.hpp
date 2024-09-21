@@ -1,54 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 22:32:04 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 14:12:04 by jyap             ###   ########.fr       */
+/*   Created: 2024/09/18 22:32:49 by jyap              #+#    #+#             */
+/*   Updated: 2024/09/21 17:19:58 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 // Header-protection
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#ifndef POINT_HPP
+# define POINT_HPP
 
 // Includes
+#include <string>
 #include <iostream>
-#include <cmath>
+#include "Fixed.hpp"
 
 // classes
 
-class Fixed
+class Point
 {
 	private:
-		int	_fp_value;
-		static const int _fract_bits;
+		const Fixed _x;
+		const Fixed _y;
 
 	public:
 	// Constructors
-		Fixed();
-		Fixed(const int input);
-		Fixed(const float input);
-		Fixed(const Fixed& copy);
+		Point();
+		Point(const float x, const float y);
+		Point(const Point& copy);
 
-	// Deconstructors
-		~Fixed();
+	// Destructors
+		~Point();
 
 	// Overloaded Operators
-		Fixed& operator=(const Fixed& src);
+		Point& operator=(const Point& src);
 
 	// Public Methods
-		float toFloat(void)const;
-		int toInt(void)const;
+
 	// Getter
-		int getRawBits(void)const;
+		const Fixed& getX(void)const;
+		const Fixed& getY(void)const;
 	// Setter
-		void setRawBits(int const raw);
+
 };
 
-std::ostream&	operator<<(std::ostream& o, Fixed const& fixed);
+// Overload for ostream
+std::ostream&	operator<<(std::ostream& o, Point const point);
 
 #endif

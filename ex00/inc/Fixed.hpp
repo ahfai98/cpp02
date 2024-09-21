@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:31:48 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 14:11:22 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 17:19:58 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Fixed
 		Fixed();
 		Fixed(const Fixed& copy);
 
-	// Deconstructors
+	// Destructors
 		~Fixed();
 
 	// Overloaded Operators

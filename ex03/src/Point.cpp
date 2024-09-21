@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:33:08 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 14:18:17 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 17:19:58 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,16 @@ Point::Point(const Point& copy): _x(copy.getX()), _y(copy.getY())
 	// *this = copy;
 }
 
-// Deconstructors
+// Destructors
 Point::~Point()
 {
-	// std::cout << "Point Deconstructor called" << std::endl;
+	// std::cout << "Point Destructor called" << std::endl;
 }
 
 // Overloaded Operators
 Point& Point::operator=(const Point& src)
 {
-	// std::cout << "Point Assignation operator called" << std::endl;
+	// std::cout << "Point Assignment operator called" << std::endl;
 	if (this == &src)
 		return *this;
 

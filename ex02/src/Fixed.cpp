@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:25 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 14:15:23 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/21 17:19:58 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,16 @@ Fixed::Fixed(const Fixed& copy)
 	*this = copy;
 }
 
-// Deconstructors
+// Destructors
 Fixed::~Fixed()
 {
-	// std::cout << "Fixed Deconstructor called" << std::endl;
+	// std::cout << "Fixed Destructor called" << std::endl;
 }
 
 // Overloaded Operators
 Fixed&	Fixed::operator=(const Fixed& src)
 {
-	// std::cout << "Fixed Assignation operator called" << std::endl;
+	// std::cout << "Fixed Assignment operator called" << std::endl;
 	if (this != &src)
 		this->_fp_value = src.getRawBits();
 
