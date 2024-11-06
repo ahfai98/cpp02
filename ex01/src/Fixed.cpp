@@ -12,8 +12,6 @@
 
 #include "Fixed.hpp"
 
-const int Fixed::_fract_bits = 8;
-
 // Constructors
 Fixed::Fixed(): _fp_value(0)
 {
@@ -56,7 +54,7 @@ Fixed& Fixed::operator=(const Fixed& src)
 // Public Methods
 float	Fixed::toFloat(void)const
 {
-	return ((float)this->_fp_value / (float)(1 << this->_fract_bits));
+	return ((float)this->_fp_value / (1 << this->_fract_bits));
 }
 
 int	Fixed::toInt(void)const

@@ -25,7 +25,7 @@ class Fixed
 {
 	private:
 		int	_fp_value;
-		static const int _fract_bits;
+		static const int _fract_bits = 8;
 
 	public:
 	// Constructors

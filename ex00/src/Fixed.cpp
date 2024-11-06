@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "Fixed.hpp"
-
-const int Fixed::_fract_bits = 8;
 
 // Constructors
 Fixed::Fixed(): _fp_value(0)
