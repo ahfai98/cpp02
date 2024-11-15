@@ -6,21 +6,16 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:49 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 20:07:36 by jyap             ###   ########.fr       */
+/*   Updated: 2024/11/15 18:21:35 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-// Header-protection
 #ifndef POINT_HPP
 # define POINT_HPP
 
-// Includes
 #include <string>
 #include <iostream>
 #include "Fixed.hpp"
-
-// classes
 
 class Point
 {
@@ -32,24 +27,22 @@ class Point
 	// Constructors
 		Point();
 		Point(const float x, const float y);
-		Point(const Point& copy);
+		Point(const Point &copy);
 
 	// Destructors
 		~Point();
 
 	// Overloaded Operators
-		Point& operator=(Point& src);
+		Point &operator=(Point &src);
 
 	// Public Methods
 
 	// Getter
-		const Fixed& getX(void)const;
-		const Fixed& getY(void)const;
-	// Setter
-
+		const Fixed &getX(void)const;
+		const Fixed &getY(void)const;
 };
 
 // Overload for ostream
-std::ostream&	operator<<(std::ostream& o, Point const& point);
+std::ostream &operator<<(std::ostream &o, const Point &point);
 
 #endif

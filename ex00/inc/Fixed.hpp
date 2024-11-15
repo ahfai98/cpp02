@@ -6,19 +6,15 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:31:48 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 17:19:58 by jyap             ###   ########.fr       */
+/*   Updated: 2024/11/15 18:03:50 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-// Header-protection
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
-// Includes
 #include <iostream>
 
-// classes
 class Fixed
 {
 	private:
@@ -28,21 +24,20 @@ class Fixed
 	public:
 	// Constructors
 		Fixed();
-		Fixed(const Fixed& copy);
+		Fixed(const Fixed &copy);
 
 	// Destructors
 		~Fixed();
 
 	// Overloaded Operators
-		Fixed& operator=(const Fixed& src);
+		Fixed &operator=(const Fixed &src);
 
 	// Public Methods
 
 	// Getter
 		int getRawBits(void)const;
 	// Setter
-		void setRawBits(int const raw);
-
+		void setRawBits(const int raw);
 };
 
 #endif

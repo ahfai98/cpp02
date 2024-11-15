@@ -6,20 +6,15 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:04 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 17:19:58 by jyap             ###   ########.fr       */
+/*   Updated: 2024/11/15 18:03:50 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-// Header-protection
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
-// Includes
 #include <iostream>
 #include <cmath>
-
-// classes
 
 class Fixed
 {
@@ -32,13 +27,13 @@ class Fixed
 		Fixed();
 		Fixed(const int input);
 		Fixed(const float input);
-		Fixed(const Fixed& copy);
+		Fixed(const Fixed &copy);
 
 	// Destructors
 		~Fixed();
 
 	// Overloaded Operators
-		Fixed& operator=(const Fixed& src);
+		Fixed &operator=(const Fixed &src);
 
 	// Public Methods
 		float toFloat(void)const;
@@ -46,9 +41,9 @@ class Fixed
 	// Getter
 		int getRawBits(void)const;
 	// Setter
-		void setRawBits(int const raw);
+		void setRawBits(const int raw);
 };
 
-std::ostream&	operator<<(std::ostream& o, Fixed const& fixed);
+std::ostream &operator<<(std::ostream &o, const Fixed &fixed);
 
 #endif

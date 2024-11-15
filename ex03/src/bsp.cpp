@@ -6,14 +6,13 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:54 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 20:08:30 by jyap             ###   ########.fr       */
+/*   Updated: 2024/11/15 18:24:36 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "Point.hpp"
 
-static float area (const Point p1, const Point p2, const Point p3)
+static float area(const Point p1, const Point p2, const Point p3)
 {
 	float	area;
 

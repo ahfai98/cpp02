@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:29 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 18:54:25 by jyap             ###   ########.fr       */
+/*   Updated: 2024/11/15 18:20:41 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int main(void)
 {
 	Fixed a;
-	Fixed const b(Fixed(5.05f) * Fixed(2));
+	const Fixed b(Fixed(5.05f) * Fixed(2));
 
 	std::cout << a << "\t\tis a at start\n" << std::endl;
 	std::cout << ++a << "\tis a at ++a\n" << std::endl;
@@ -32,5 +32,5 @@ int main(void)
 	std::cout << a++ <<"\tis a at a++\n" << std::endl;
 	std::cout << a << "\tis a after a++\n" << std::endl;
 
-	return 0;
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:12 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/21 17:09:15 by jyap             ###   ########.fr       */
+/*   Updated: 2024/11/15 18:03:33 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,15 @@
 int main(void)
 {
 	Fixed a;
-	Fixed const b(10);
-	Fixed const c(42.42f);
-	Fixed const d(b);
-
+	std::cout << "a=============" << std::endl;
+	const Fixed b(10);
+	std::cout << "b(10)=============" << std::endl;
+	const Fixed c(42.42f);
+	std::cout << "c(42.42f)=============" << std::endl;
+	const Fixed d(b);
+	std::cout << "d(b)=============" << std::endl;
 	a = Fixed(1234.4321f);
+	std::cout << "a=Fixed(1234.4321f)============" << std::endl;
 
 	std::cout << "a is " << a << std::endl;
 	std::cout << "b is " << b << std::endl;
@@ -37,5 +41,5 @@ int main(void)
 	std::cout << "c is " << c.toFloat() << " as float" << std::endl;
 	std::cout << "d is " << d.toFloat() << " as float" << std::endl;
 
-	return 0;
+	return (0);
 }
