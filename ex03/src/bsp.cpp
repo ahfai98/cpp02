@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:54 by jyap              #+#    #+#             */
-/*   Updated: 2024/11/15 18:24:36 by jyap             ###   ########.fr       */
+/*   Updated: 2025/01/04 10:51:41 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,10 @@ bool bsp(const Point a, const Point b, const Point c, const Point point)
 	d2 = area(point, b, c);
 	d3 = area(point, a, c);
 
-	if ( d1 == 0 || d2 == 0 || d3 == 0)
-		return (false);
-	else if ( d1 + d2 + d3 == d0 )
+	const float epsilon = 1e-6f;
+	if (fabs(d1) < epsilon || fabs(d2) < epsilon || fabs(d3) < epsilon)
+    	return (false);
+	else if (fabs(d1 + d2 + d3 - d0) < epsilon)
 		return (true);
 	return (false);
 }

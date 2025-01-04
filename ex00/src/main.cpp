@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:31:56 by jyap              #+#    #+#             */
-/*   Updated: 2024/11/15 17:36:43 by jyap             ###   ########.fr       */
+/*   Updated: 2025/01/04 10:26:19 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 
 int main(void)
 {
+	std::cout << "a" << std::endl;
 	Fixed a;
-	std::cout << "a============" << std::endl;
+	std::cout << "============" << std::endl;
+	std::cout << "b(a)" << std::endl;
 	Fixed b(a);
-	std::cout << "b(a)============" << std::endl;
+	std::cout << "============" << std::endl;
+	std::cout << "c" << std::endl;
 	Fixed c;
-	std::cout << "c============" << std::endl;
+	std::cout << "============" << std::endl;
+	std::cout << "c = b" << std::endl;
 	c = b;
-	std::cout << "c=b============" << std::endl;
+	std::cout << "============" << std::endl;
 
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;

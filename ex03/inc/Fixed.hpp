@@ -6,21 +6,16 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:45 by jyap              #+#    #+#             */
-/*   Updated: 2024/11/15 18:09:20 by jyap             ###   ########.fr       */
+/*   Updated: 2025/01/04 10:38:19 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
-
 #include <string>
 #include <iostream>
 #include <cmath>
-
-
 
 class Fixed
 {

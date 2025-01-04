@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:32:08 by jyap              #+#    #+#             */
-/*   Updated: 2024/11/15 18:03:50 by jyap             ###   ########.fr       */
+/*   Updated: 2025/01/04 10:04:25 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Fixed::Fixed(): _fp_value(0)
 
 Fixed::Fixed(const int input)
 {
-	std::cout << "Fixed const intructor called." << std::endl;
+	std::cout << "Fixed Int Contructor called." << std::endl;
 	this->_fp_value = input << this->_fract_bits;
 }
 
